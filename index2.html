@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Slider</title>
+<link
+rel="stylesheet"
+href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+/>
+<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+</head>
+<body>
+<style>
+html,
+body{
+height: 100%;
+font-size: 15px;
+}
+.swiper{
+width: 1000px;
+height: 100%;
+}
+.swiper-slide{
+text-align: center;
+font-size: 18px;
+background-color: aliceblue;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+.swiper-slide img{
+width: 58%;
+object-fit: cover;
+}
+.swiper-button-next, .swiper-rtl .swiper-button-prev{
+right: 140px !important;
+left: auto;
+}
+.swiper-button-prev, .swiper-rtl .swiper-button-next{
+left: 140px !important;
+right: auto;
+}
+</style>
+<div class="swiper mySwiper">
+<div class="swiper-wrapper">
+<div class="swiper-slide"><img
+src="https://img.artpal.com/57554/2-16-8-20-14-21-44m.jpg"></div>
+
+<div class="swiper-slide"><img src="https://i.pinimg.com/736x/91/b2/d6/91b2d6fb8fa25590572f71d01251bfa3.jpg"></div>
+
+<div class="swiper-slide"><img src="https://i.pinimg.com/736x/d5/2b/b9/d52bb991a72a18e6a0744ee03daf5d25.jpg"></div>
+
+<div class="swiper-slide"><img
+
+src="https://i.pinimg.com/736x/ba/8d/3b/ba8d3bdd8e3ba9335d3c28bd351ce183.jpg
+
+"></div>
+
+<div class="swiper-slide"><img src="https://static.boredpanda.com/blog/wp-content/uploads/2015/09/cute-hamsters-fb.jpg"></div>
+
+</div>
+<div class="swiper-pagination"></div>
+</div>
+<div class="swiper-button-next"></div>
+<div class="swiper-button-prev"></div>
+<script>
+var swiper = new Swiper(".mySwiper", {
+spaceBetween: 30,
+navigation: {
+nextEl: ".swiper-button-next",
+prevEl: ".swiper-button-prev",
+},
+pagination: {
+el: ".swiper-pagination",
+},
+mousewheel: true,
+keyboard: true,
+});
+</script>
+</body>
+</html>
